@@ -14,6 +14,7 @@ Author = Darel
 APP_NAME = "Devia Translator"
 SUCCESS_ADDING_MESSAGE = "Successfully added the word to the dictionary"
 QUESTION_TO_MODIFY_TEXT = "Are you sure, you want to modify the english version of this word ?"
+QUESTION_TO_DELETE_WORD = "Are you sure, you want to delete this word from the dictionary"
 
 TEXT_TO_TRANSLATE_LABEL = "Type here: "
 TRANSLATION_RESULT_LABEL = "Result: "
@@ -36,7 +37,7 @@ BUTTON_EXIT_TEXT = "Exit"
 
 KEY_TO_DELETE_TEXT = "Enter the key to delete"
 
-# DISK_NAME = os.environ['SYSTEMROOT'][0:3]
+DISK_NAME = os.environ['SYSTEMROOT'][0:3]
 INSERT_INTO = "INSERT OR IGNORE INTO dictionary VALUES (?, ?)"
 SELECT_WORD = "SELECT * FROM dictionary WHERE word_key=?"
 DELETE_WORD = "DELETE FROM dictionary WHERE word_key=?"

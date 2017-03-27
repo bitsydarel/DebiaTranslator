@@ -28,7 +28,12 @@ def get_remove_word_page():
 
 def get_database():
     if platform.system() == "Windows":
-        os.chdir(DISK_NAME + "\DTranslator")
+        if (os.path.isdir(DISK_NAME + "\DTranslator")):
+            os.chdir(DISK_NAME + "\DTranslator")
+        else:
+            os.mkdir(DISK_NAME + "\DTranslator")
+            os.chdir(DISK_NAME + "\DTranslator")
+
     if os.path.exists("dictionary.db"):
         return sqlite3.connect("dictionary.db")
     else:
