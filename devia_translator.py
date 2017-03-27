@@ -28,5 +28,6 @@ class DebiaTranslatorApp(WindowFramework.Tk):
 if __name__ == "__main__":
     app = DebiaTranslatorApp()
     app.title(APP_NAME)
+    get_database()
     app.mainloop()
 
