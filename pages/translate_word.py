@@ -151,6 +151,7 @@ class TranslatePage(window_manager.Frame):
             return result
 
     def setup_map(self):
+        self.letter_map = {}
         database = app_util.get_database()
         cursor = database.cursor()
         cursor.execute(SELECT_EVERYTHING)

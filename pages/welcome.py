@@ -50,7 +50,7 @@ class WelcomeWindow(window_manager.Frame):
         self.pages[4] = app_util.get_remove_word_page()
 
     def setup_logo(self):
-        rendered_logo = ImageTk.PhotoImage(Image.open(RESOURCE_PATH + "zoom_logo.jpg").resize((96, 96)))
+        rendered_logo = ImageTk.PhotoImage(Image.open("zoom_logo.jpg").resize((96, 96)))
         present_logo = window_manager.Label(self, image=rendered_logo)
         present_logo.image = rendered_logo
         present_logo.grid(row=0, column=0, padx=16, pady=8, sticky="wn")

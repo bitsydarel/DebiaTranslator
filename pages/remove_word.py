@@ -31,13 +31,14 @@ class RemoveWordPage(window_manager.Frame):
         submit_button.grid(row=2, column=1, sticky="es", padx=8, pady=56)
 
     def confirm_choice(self):
-        result = messagebox.askyesno(APP_NAME, QUESTION_TO_MODIFY_TEXT)
+        result = messagebox.askyesno(APP_NAME, QUESTION_TO_DELETE_WORD)
         if result:
             self.remove_word()
 
     def remove_word(self):
+        key_to_remove = self.key_edit_text.get()
         database = app_util.get_database()
-        database.execute(DELETE_WORD, (self.key_edit_text.get(), ))
+        database.execute(DELETE_WORD, (key_to_remove,))
         database.commit()
         database.close()
 
